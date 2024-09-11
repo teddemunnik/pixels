@@ -144,6 +144,7 @@ impl ScalingRenderer {
                 module: &module,
                 entry_point: "vs_main",
                 buffers: &[vertex_buffer_layout],
+                compilation_options: Default::default(),
             },
             primitive: wgpu::PrimitiveState::default(),
             depth_stencil: None,
@@ -156,6 +157,7 @@ impl ScalingRenderer {
                     blend: Some(blend_state),
                     write_mask: wgpu::ColorWrites::ALL,
                 })],
+                compilation_options: Default::default(),
             }),
             multiview: None,
         });
